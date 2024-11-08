@@ -43,5 +43,10 @@ namespace CProject
             // Встановлюємо DataSource для DataGridView
             dgvCatalog.DataSource = phones;
         }
+
+        private void dgvCatalog_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

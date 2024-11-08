@@ -31,9 +31,9 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             tabPage2 = new TabPage();
+            dgvCatalog = new DataGridView();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
-            dgvCatalog = new DataGridView();
             tabControl1.SuspendLayout();
             tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCatalog).BeginInit();
@@ -76,6 +76,17 @@
             tabPage2.Text = "Catalog";
             tabPage2.UseVisualStyleBackColor = true;
             // 
+            // dgvCatalog
+            // 
+            dgvCatalog.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCatalog.Dock = DockStyle.Bottom;
+            dgvCatalog.Location = new Point(2, 42);
+            dgvCatalog.Name = "dgvCatalog";
+            dgvCatalog.RowTemplate.Height = 25;
+            dgvCatalog.Size = new Size(750, 252);
+            dgvCatalog.TabIndex = 0;
+            dgvCatalog.CellContentClick += dgvCatalog_CellContentClick;
+            // 
             // tabPage3
             // 
             tabPage3.Location = new Point(4, 24);
@@ -95,16 +106,6 @@
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Admin";
             tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // dgvCatalog
-            // 
-            dgvCatalog.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCatalog.Dock = DockStyle.Bottom;
-            dgvCatalog.Location = new Point(2, 42);
-            dgvCatalog.Name = "dgvCatalog";
-            dgvCatalog.RowTemplate.Height = 25;
-            dgvCatalog.Size = new Size(750, 252);
-            dgvCatalog.TabIndex = 0;
             // 
             // Form1
             // 

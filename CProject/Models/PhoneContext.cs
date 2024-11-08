@@ -16,7 +16,7 @@ namespace CProject.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            string connectionString = "Server=ALEXANDRA;Database=PhonesDb;Trusted_Connection=true;MultipleActiveResultSets=true;";
+            string connectionString = "Server=ALEXANDRA;Database=PhonesDb1;Trusted_Connection=true;MultipleActiveResultSets=true;";
             optionsBuilder.UseSqlServer(connectionString);
         }
 
