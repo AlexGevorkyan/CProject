@@ -19,6 +19,7 @@ namespace CProject.Models
         public string Description { get; set; }
         public string Picture { get; set; }
         public int Count { get; set; }
+        public Brand Brand { get; set; }  // Навігаційна властивість для зв'язку з Brand
 
     }
 }
