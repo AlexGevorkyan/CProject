@@ -1,5 +1,10 @@
 using CProject.Models;
-using System.Diagnostics;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.EntityFrameworkCore.Storage;
+using System;
+using System.ComponentModel.Design.Serialization;
+using System.Windows.Forms;
 
 namespace CProject
 {
@@ -8,6 +13,8 @@ namespace CProject
         List<Phone> phones;
         List<Brand> brands;
         PhoneContext context;
+
+        private int selectedBrandId;  // cтворила як змінну для зберігання обраного бренду в ComboBox
 
         public Form1()
         {
@@ -34,11 +41,11 @@ namespace CProject
                 MessageBox.Show("");
                 return;
             }
-            Phone phone = new Phone();
+            Phone phone = new Phone
             {
                 Model = tbModel.Text.Trim(),
-                Brand = cbBrand.Text.Trim(),
-                Price = tbPrice.Text.Trim(),
+                BrandId = selectedBrandId,
+                Price = Convert.ToInt32(tbPrice.Text.Trim()),
                 Description = tbDescription.Text.Trim()
             };
             context.Phone.Add(phone);
@@ -51,7 +58,10 @@ namespace CProject
                 MessageBox.Show("");
                 return;
             }
-            BrandName = tbBrand.Text.Trim();
+            Brand brand = new Brand
+            {
+                BrandName = tbBrand.Text.Trim()
+            };
         }
 
         private void tbBrand_TextChanged(object sender, EventArgs e)
