@@ -24,7 +24,12 @@ namespace CProject
             info.ShowDialog();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void dgvCatalog_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
         {
             // Завантажуємо дані з бази даних з використанням об'єднання таблиць
             var phones = phoneContext.Phone
@@ -42,11 +47,6 @@ namespace CProject
 
             // Встановлюємо DataSource для DataGridView
             dgvCatalog.DataSource = phones;
-        }
-
-        private void dgvCatalog_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

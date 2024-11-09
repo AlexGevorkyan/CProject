@@ -116,6 +116,7 @@
             Margin = new Padding(2, 1, 2, 1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load_1;
             tabControl1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvCatalog).EndInit();
