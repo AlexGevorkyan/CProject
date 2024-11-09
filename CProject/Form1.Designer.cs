@@ -47,6 +47,8 @@
             tbBrand = new TextBox();
             tbModel = new TextBox();
             dgPhone = new DataGridView();
+            label6 = new Label();
+            tbImage = new TextBox();
             tabControl1.SuspendLayout();
             tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCatalog).BeginInit();
@@ -62,19 +64,19 @@
             tabControl1.Controls.Add(tabPage4);
             tabControl1.Dock = DockStyle.Fill;
             tabControl1.Location = new Point(0, 0);
-            tabControl1.Margin = new Padding(2, 1, 2, 1);
+            tabControl1.Margin = new Padding(3, 2, 3, 2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(871, 431);
+            tabControl1.Size = new Size(1415, 727);
             tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
-            tabPage1.Location = new Point(4, 29);
-            tabPage1.Margin = new Padding(2, 1, 2, 1);
+            tabPage1.Location = new Point(8, 46);
+            tabPage1.Margin = new Padding(3, 2, 3, 2);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(2, 1, 2, 1);
-            tabPage1.Size = new Size(863, 398);
+            tabPage1.Padding = new Padding(3, 2, 3, 2);
+            tabPage1.Size = new Size(1399, 636);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Login";
             tabPage1.UseVisualStyleBackColor = true;
@@ -82,11 +84,11 @@
             // tabPage2
             // 
             tabPage2.Controls.Add(dgvCatalog);
-            tabPage2.Location = new Point(4, 29);
-            tabPage2.Margin = new Padding(2, 1, 2, 1);
+            tabPage2.Location = new Point(8, 46);
+            tabPage2.Margin = new Padding(3, 2, 3, 2);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(2, 1, 2, 1);
-            tabPage2.Size = new Size(863, 398);
+            tabPage2.Padding = new Padding(3, 2, 3, 2);
+            tabPage2.Size = new Size(1399, 636);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Catalog";
             tabPage2.UseVisualStyleBackColor = true;
@@ -95,27 +97,29 @@
             // 
             dgvCatalog.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCatalog.Dock = DockStyle.Bottom;
-            dgvCatalog.Location = new Point(2, 61);
-            dgvCatalog.Margin = new Padding(3, 4, 3, 4);
+            dgvCatalog.Location = new Point(3, 96);
+            dgvCatalog.Margin = new Padding(5, 6, 5, 6);
             dgvCatalog.Name = "dgvCatalog";
             dgvCatalog.RowHeadersWidth = 51;
             dgvCatalog.RowTemplate.Height = 25;
-            dgvCatalog.Size = new Size(859, 336);
+            dgvCatalog.Size = new Size(1393, 538);
             dgvCatalog.TabIndex = 0;
             dgvCatalog.CellContentClick += dgvCatalog_CellContentClick;
             // 
             // tabPage3
             // 
-            tabPage3.Location = new Point(4, 29);
-            tabPage3.Margin = new Padding(2, 1, 2, 1);
+            tabPage3.Location = new Point(8, 46);
+            tabPage3.Margin = new Padding(3, 2, 3, 2);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(863, 398);
+            tabPage3.Size = new Size(1399, 636);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Cart";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
+            tabPage4.Controls.Add(label6);
+            tabPage4.Controls.Add(tbImage);
             tabPage4.Controls.Add(label5);
             tabPage4.Controls.Add(label4);
             tabPage4.Controls.Add(label3);
@@ -129,10 +133,10 @@
             tabPage4.Controls.Add(tbBrand);
             tabPage4.Controls.Add(tbModel);
             tabPage4.Controls.Add(dgPhone);
-            tabPage4.Location = new Point(4, 29);
-            tabPage4.Margin = new Padding(2, 1, 2, 1);
+            tabPage4.Location = new Point(8, 46);
+            tabPage4.Margin = new Padding(3, 2, 3, 2);
             tabPage4.Name = "tabPage4";
-            tabPage4.Size = new Size(863, 398);
+            tabPage4.Size = new Size(1399, 673);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Admin";
             tabPage4.UseVisualStyleBackColor = true;
@@ -140,120 +144,153 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(35, 230);
+            label5.Location = new Point(60, 384);
+            label5.Margin = new Padding(5, 0, 5, 0);
             label5.Name = "label5";
-            label5.Size = new Size(88, 20);
+            label5.Size = new Size(140, 32);
             label5.TabIndex = 26;
             label5.Text = "Description:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(35, 166);
+            label4.Location = new Point(57, 304);
+            label4.Margin = new Padding(5, 0, 5, 0);
             label4.Name = "label4";
-            label4.Size = new Size(44, 20);
+            label4.Size = new Size(70, 32);
             label4.TabIndex = 25;
             label4.Text = "Price:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(127, 99);
+            label3.Location = new Point(57, 223);
+            label3.Margin = new Padding(5, 0, 5, 0);
             label3.Name = "label3";
-            label3.Size = new Size(83, 20);
+            label3.Size = new Size(131, 32);
             label3.TabIndex = 24;
             label3.Text = "Add Brand:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(35, 99);
+            label2.Location = new Point(57, 126);
+            label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
-            label2.Size = new Size(51, 20);
+            label2.Size = new Size(81, 32);
             label2.TabIndex = 23;
             label2.Text = "Brand:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(35, 34);
+            label1.Location = new Point(57, 35);
+            label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(55, 20);
+            label1.Size = new Size(88, 32);
             label1.TabIndex = 22;
             label1.Text = "Model:";
             // 
             // btAdd
             // 
-            btAdd.Location = new Point(222, 314);
+            btAdd.Location = new Point(358, 562);
+            btAdd.Margin = new Padding(5);
             btAdd.Name = "btAdd";
-            btAdd.Size = new Size(94, 29);
+            btAdd.Size = new Size(153, 46);
             btAdd.TabIndex = 21;
             btAdd.Text = "Add";
             btAdd.UseVisualStyleBackColor = true;
+            btAdd.Click += btAdd_Click;
             // 
             // btBrand
             // 
-            btBrand.Location = new Point(268, 123);
+            btBrand.Location = new Point(433, 260);
+            btBrand.Margin = new Padding(5);
             btBrand.Name = "btBrand";
-            btBrand.Size = new Size(48, 29);
+            btBrand.Size = new Size(78, 46);
             btBrand.TabIndex = 20;
             btBrand.Text = "Add";
             btBrand.UseVisualStyleBackColor = true;
+            btBrand.Click += btBrand_Click;
             // 
             // cbBrand
             // 
             cbBrand.FormattingEnabled = true;
-            cbBrand.Location = new Point(35, 122);
+            cbBrand.Location = new Point(57, 163);
+            cbBrand.Margin = new Padding(5);
             cbBrand.Name = "cbBrand";
-            cbBrand.Size = new Size(73, 28);
+            cbBrand.Size = new Size(454, 40);
             cbBrand.TabIndex = 19;
             // 
             // tbPrice
             // 
-            tbPrice.Location = new Point(35, 189);
+            tbPrice.Location = new Point(57, 340);
+            tbPrice.Margin = new Padding(5);
             tbPrice.Name = "tbPrice";
-            tbPrice.Size = new Size(281, 27);
+            tbPrice.Size = new Size(454, 39);
             tbPrice.TabIndex = 18;
             // 
             // tbDescription
             // 
-            tbDescription.Location = new Point(35, 253);
+            tbDescription.Location = new Point(57, 421);
+            tbDescription.Margin = new Padding(5);
             tbDescription.Name = "tbDescription";
-            tbDescription.Size = new Size(281, 27);
+            tbDescription.Size = new Size(454, 39);
             tbDescription.TabIndex = 17;
             // 
             // tbBrand
             // 
-            tbBrand.Location = new Point(127, 123);
+            tbBrand.Location = new Point(57, 260);
+            tbBrand.Margin = new Padding(5);
             tbBrand.Name = "tbBrand";
-            tbBrand.Size = new Size(125, 27);
+            tbBrand.Size = new Size(366, 39);
             tbBrand.TabIndex = 16;
             // 
             // tbModel
             // 
-            tbModel.Location = new Point(35, 60);
+            tbModel.Location = new Point(57, 77);
+            tbModel.Margin = new Padding(5);
             tbModel.Name = "tbModel";
-            tbModel.Size = new Size(281, 27);
+            tbModel.Size = new Size(454, 39);
             tbModel.TabIndex = 15;
             // 
             // dgPhone
             // 
             dgPhone.BackgroundColor = SystemColors.ButtonHighlight;
             dgPhone.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgPhone.Location = new Point(368, 34);
+            dgPhone.Location = new Point(554, 54);
+            dgPhone.Margin = new Padding(5);
             dgPhone.Name = "dgPhone";
             dgPhone.RowHeadersWidth = 51;
             dgPhone.RowTemplate.Height = 29;
-            dgPhone.Size = new Size(460, 331);
+            dgPhone.Size = new Size(792, 554);
             dgPhone.TabIndex = 14;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(60, 461);
+            label6.Margin = new Padding(5, 0, 5, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(85, 32);
+            label6.TabIndex = 28;
+            label6.Text = "Image:";
+            // 
+            // tbImage
+            // 
+            tbImage.Location = new Point(57, 498);
+            tbImage.Margin = new Padding(5);
+            tbImage.Name = "tbImage";
+            tbImage.Size = new Size(454, 39);
+            tbImage.TabIndex = 27;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(871, 431);
+            ClientSize = new Size(1415, 727);
             Controls.Add(tabControl1);
-            Margin = new Padding(2, 1, 2, 1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load_1;
@@ -287,5 +324,7 @@
         private TextBox tbBrand;
         private TextBox tbModel;
         private DataGridView dgPhone;
+        private Label label6;
+        private TextBox tbImage;
     }
 }

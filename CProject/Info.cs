@@ -22,6 +22,7 @@ namespace CProject
         public Info(int Id)
         {
             InitializeComponent();
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             //MessageBox.Show(Id.ToString());
             phoneContext = new PhoneContext();
             imageUrl = phoneContext.Phone
@@ -32,28 +33,33 @@ namespace CProject
 
         private async void Info_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private async void Info_Load_1(object sender, EventArgs e)
+        {
             if (!string.IsNullOrEmpty(imageUrl))
             {
-                //try
-                //{
-                //    using (HttpClient client = new HttpClient())
-                //    {
-                //        // Завантажуємо зображення з URL
-                //        var response = await client.GetAsync(imageUrl);
-                //        response.EnsureSuccessStatusCode(); // Перевіряємо, чи успішний запит
+                try
+                {
+                    using (HttpClient client = new HttpClient())
+                    {
+                        // Завантажуємо зображення з URL
+                        var response = await client.GetAsync(imageUrl);
+                        response.EnsureSuccessStatusCode(); // Перевіряємо, чи успішний запит
 
-                //        // Отримуємо потік байтів
-                //        using (Stream imageStream = await response.Content.ReadAsStreamAsync())
-                //        {
-                //            pictureBox1.Image = System.Drawing.Image.FromStream(imageStream);
-                //        }
-                //    }
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show($"Не вдалося завантажити зображення: {ex.Message}");
-                //}
-                //pictureBox1.Load(imageUrl);
+                        // Отримуємо потік байтів
+                        using (Stream imageStream = await response.Content.ReadAsStreamAsync())
+                        {
+                            pictureBox1.Image = System.Drawing.Image.FromStream(imageStream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Не вдалося завантажити зображення: {ex.Message}");
+                }
+                pictureBox1.Load(imageUrl);
             }
             else
             {
